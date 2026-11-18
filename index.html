@@ -321,6 +321,64 @@ td.num,th.num{text-align:right}
 .basecard{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
 @media (max-width:820px){.kpibar{grid-template-columns:repeat(2,minmax(0,1fr))}.basecard{grid-template-columns:minmax(0,1fr)}.pbar>div:last-child{margin-left:0}}
 /* ---- POC notices ---- */
+.prod{background:linear-gradient(110deg,#0b3d36 0%,#0f6b5c 55%,#1aa58a 100%);color:#fff;padding-block:14px;padding-left:24px;padding-right:max(24px,env(safe-area-inset-right,0px))}
+.prod-in{display:flex;align-items:center;gap:18px;flex-wrap:wrap;max-width:1500px}
+.prod-txt{display:flex;flex-direction:column;gap:3px;min-width:0;flex:1 1 360px}
+.prod-txt b{font-size:19px;letter-spacing:-.01em}.prod-txt span{font-size:13px;color:#cdeee6}
+.prod-tag{display:inline-flex!important;align-self:flex-start;gap:6px;align-items:center;font-size:10.5px!important;font-weight:800;letter-spacing:.14em;color:#0b3d36!important;background:#7ff0cf;border-radius:999px;padding:3px 10px}
+.prod-tag:before{content:"";width:7px;height:7px;border-radius:50%;background:#0b3d36;animation:blink 1.6s infinite}
+@keyframes blink{50%{opacity:.25}}
+.prod-btn{background:#fff;color:#0b3d36;font-weight:800;font-size:16px;text-decoration:none;border-radius:12px;padding:14px 22px;box-shadow:0 6px 20px rgba(0,0,0,.18);white-space:nowrap}
+.prod-btn:hover{background:#eafff8}.prod-btn:focus-visible{outline:3px solid #7ff0cf;outline-offset:3px}
+@media (max-width:820px){.prod{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}.prod-btn{white-space:normal;text-align:center;width:100%}}
+@media (prefers-reduced-motion:reduce){.prod-tag:before{animation:none}}
+.lf-top{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px}.lf-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.lf-feed,.lf-esc{min-width:0}.lf-hd{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;align-items:flex-start;margin-bottom:10px}.lf-btns{display:flex;gap:8px;flex-wrap:wrap}
+.btn{all:unset;cursor:pointer;border:1px solid #cfe0dc;background:#fff;color:#14453c;border-radius:9px;padding:8px 13px;font-weight:700;font-size:13px}.btn:hover{background:#eef7f4}.btn.sm{padding:5px 10px;font-size:12px}.btn[disabled]{opacity:.45;cursor:default}.btn:focus-visible{outline:2px solid #1aa58a;outline-offset:2px}
+.dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#9aa9a6;margin-right:6px}.dot.on{background:#16a34a;animation:blink 1.4s infinite}
+.lf-steps{display:flex;flex-wrap:wrap;gap:5px;align-items:center;margin-bottom:10px}.lf-steps span{font-size:11.5px;font-weight:700;background:#eef7f4;border:1px solid #cfe8df;border-radius:7px;padding:4px 8px;color:#14453c}.lf-steps span.g2{background:#fdecea;border-color:#f3c4bb;color:#8f1d2c}.lf-steps i{font-style:normal;color:#0f8a72;font-weight:800}
+.lf-t td{vertical-align:top}.lf-t .chip{white-space:normal;display:inline-block;margin:1px 0}.fres .chip{white-space:normal}.fmt{font-size:10.5px;font-weight:800;letter-spacing:.06em;background:#e8eefc;color:#2846a0;border-radius:5px;padding:1px 6px}
+.raw{white-space:pre-wrap;word-break:break-all;font:11px/1.45 ui-monospace,Menlo,monospace;background:#0f2a2e;color:#cdeee6;border-radius:8px;padding:8px 10px;margin:6px 0 0;max-height:220px;overflow:auto}
+.escc{border:1px solid #f3c4bb;background:#fff6f4;border-radius:10px;padding:10px 12px;margin-bottom:8px;font-size:13px;display:flex;flex-direction:column;gap:3px}.escc.esc{border-color:#dc2626;background:#fdecea}.escc.ack{border-color:#cfe8df;background:#f3faf7}.escc .row{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap}
+#fhirIn{width:100%;box-sizing:border-box;min-height:190px;font:11.5px/1.45 ui-monospace,Menlo,monospace;border:1px solid #d5e3de;border-radius:9px;padding:10px;background:#f7faf9;color:#14453c;resize:vertical}
+.fres{margin-top:10px;border-top:1px dashed #d5e3de;padding-top:10px}.fres.bad{color:#8f1d2c}
+.audit{font-size:12px;max-height:320px;overflow:auto;display:flex;flex-direction:column;gap:3px}.audit div{display:grid;grid-template-columns:62px 78px minmax(0,1fr);gap:8px;padding:3px 0;border-bottom:1px solid #eef3f1}.audit .ak{font-weight:800;font-size:10.5px;letter-spacing:.06em;color:#0f6b5c}
+.chip.na{background:#eef1f0;color:#5b6f6b}
+.askf{display:flex;gap:8px;padding:12px 16px;border-top:1px solid #e6efec;flex-wrap:wrap}.askf input{flex:1 1 220px;min-width:0;border:1px solid #cfe0dc;border-radius:9px;padding:10px 12px;font:inherit;background:#fff;color:#13282b}
+.ctxs{font-size:11.5px;color:#5b6f6b;padding:0 16px 12px}.ctxs b{color:#14453c}
+.bound{background:#fff4e5;border:1px solid #f5c98a;border-radius:8px;padding:8px 10px;margin-bottom:8px;color:#7a4a00}
+.lib{font-size:12px}.lib li{margin:3px 0}
+@media (max-width:1100px){.lf-top,.lf-two{grid-template-columns:minmax(0,1fr)}}
+.np-hero{background:linear-gradient(120deg,#0b3d36,#11564b);color:#fff;border-radius:14px;padding:20px 22px}
+.np-hero h2{color:#fff;font-size:22px;margin:0 0 6px}.np-hero p{margin:0;color:#cdeee6;max-width:900px}
+.np-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.np-card{background:#fff;border:1px solid #dfe9e6;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.np-card h3{margin:0;font-size:16px}.np-card .k{font-size:10.5px;letter-spacing:.14em;font-weight:800;color:#0f8a72}
+.np-card ul{margin:0;padding-left:18px}.np-card li{margin:4px 0}
+.flow2{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.flow2 span{background:#eef7f4;border:1px solid #cfe8df;border-radius:8px;padding:6px 9px;font-size:12px;font-weight:600;color:#14453c}
+.flow2 i{color:#0f8a72;font-style:normal;font-weight:800}
+.esc{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.esc div{border-radius:10px;padding:10px;background:#fff4f2;border:1px solid #f3c4bb;font-size:12.5px}
+.esc b{display:block;color:#8f1d2c;font-size:13px;margin-bottom:2px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.split div{border-radius:10px;padding:10px 12px;font-size:12.5px}
+.split .y{background:#eef7f4;border:1px solid #cfe8df}.split .n{background:#fdf2f0;border:1px solid #f3c4bb}
+.ask{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:16px}
+.chatbox{background:#fff;border:1px solid #dfe9e6;border-radius:14px;display:flex;flex-direction:column;min-width:0}
+.chathd{padding:12px 16px;border-bottom:1px solid #e6efec;display:flex;gap:10px;align-items:center}
+.chathd b{font-size:15px}.chathd .pv{margin-left:auto;font-size:10.5px;font-weight:800;letter-spacing:.1em;background:#fff1c2;color:#7a5a00;border-radius:999px;padding:2px 9px}
+.msgs{padding:14px 16px;display:flex;flex-direction:column;gap:12px;min-height:260px}
+.msg-u{align-self:flex-end;background:#0f6b5c;color:#fff;border-radius:12px 12px 2px 12px;padding:9px 13px;max-width:80%}
+.msg-a{align-self:flex-start;background:#f4f8f7;border:1px solid #e1ebe8;border-radius:12px 12px 12px 2px;padding:12px 14px;max-width:92%;line-height:1.55}
+.msg-a ul{margin:6px 0;padding-left:18px}.msg-a .cite{display:inline-block;font-size:10.5px;font-weight:700;background:#e3f1ec;color:#0f6b5c;border-radius:5px;padding:0 5px;margin-left:3px}
+.msg-a .src{margin-top:8px;padding-top:8px;border-top:1px dashed #d5e3de;font-size:11.5px;color:#5b6f6b}
+.msg-a .guard{margin-top:8px;font-size:11.5px;color:#7a5a00;background:#fff8e6;border-radius:6px;padding:5px 8px}
+.qs{display:flex;flex-direction:column;gap:8px}
+.qbtn{all:unset;cursor:pointer;background:#fff;border:1px solid #cfe8df;border-radius:10px;padding:10px 12px;font-weight:600;color:#14453c;font-size:13px}
+.qbtn:hover{background:#eef7f4}.qbtn:focus-visible{outline:2px solid #1aa58a}
+.qin{display:flex;gap:8px;padding:12px 16px;border-top:1px solid #e6efec}.qin input{flex:1;min-width:0;border:1px solid #d5e3de;border-radius:9px;padding:9px 11px;font:inherit;background:#f7faf9;color:#5b6f6b}
+@media (max-width:1100px){.np-grid,.ask{grid-template-columns:minmax(0,1fr)}.esc{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .poc{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:#fff6db;border-bottom:1px solid #efd77f;color:#5f4a00;font-size:12px;padding-block:7px;padding-left:24px;padding-right:max(24px,env(safe-area-inset-right,0px));position:sticky;top:env(safe-area-inset-top,0px);z-index:8}
 .poc b{font-size:11px;letter-spacing:.06em;text-transform:uppercase;background:#f3d66b;color:#4a3900;border-radius:4px;padding:2px 7px}
 .poc span{flex:1 1 360px}
@@ -377,6 +435,7 @@ td.num,th.num{text-align:right}
 <div class="app">
   <aside class="side" id="side"></aside>
   <div class="main">
+    <div class="prod" role="region" aria-label="Production platform"><div class="prod-in"><div class="prod-txt"><span class="prod-tag">LIVE · GOOGLE CLOUD</span><b>Burak production pipeline is live.</b><span>This page is the illustrative demo. The same pipeline runs in production with secure login, on Google Cloud Platform.</span></div><a class="prod-btn" href="https://burakomics-backend-705486089059.us-central1.run.app/login?redirect=/app/org/728d5aec-6750-488c-9021-f4e6732c63e0/workspace/c35f99d7-d820-4012-8485-63317b96fdb9/coming-soon?feature=Dashboard" target="_blank" rel="noopener">Log in to Burak production ↗</a></div></div>
     <div class="poc" role="note"><b>Proof of concept</b><span>All patients, values and dates are illustrative demonstration data. Not real patients. Not for clinical use.</span><button class="linkbtn" id="aboutBtn">About this demo</button></div>
     <header class="topbar"><div><h1 id="ttl"></h1><p id="sub"></p></div><span class="ws">Population screening · demo</span></header>
     <div class="content" id="view"></div>
@@ -491,6 +550,9 @@ const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&g
 const fmt=v=>v==null||isNaN(v)?'—':Math.abs(v)>=100?String(Math.round(v)):Math.abs(v)>=10?(+v.toFixed(1)).toString():v.toFixed(2).replace(/(\.\d)0$/,'$1');
 const sgn=v=>(v>0?'+':'')+fmt(v);
 const tierOf=(t,v)=>{for(const x of t)if(v<x[0])return {lab:x[1],s:x[2]};return {lab:'',s:'ok'};};
+/* Gate 2: published critical-value list (hard-coded, runs first). Demo covers markers present in this panel. */
+const G2=[['GLU',v=>v<=2.5||v>=25,'2.5 or below, or 25 or above'],['HB',v=>v<7||v>19,'below 7 or above 19'],['WBC',v=>v<1.5||v>50,'below 1.5 or above 50'],['PLT',v=>v<=30||v>1000,'30 or below, or above 1000'],['CREA',v=>v>500,'above 500'],['ALT',v=>v>1000,'above 1000'],['AST',v=>v>1000,'above 1000']];
+function gate2(p,ri){const out=[];for(const [k,f,l] of G2){const x=p.rep[ri].v[k];if(x!=null&&f(x))out.push({k,v:x,l});}return out;}
 const flagged=s=>s&&s!=='ok'&&s!=='na';
 const pkgOf=(p,ri)=>p.rep[ri].pk||PKG[bandOf(p.age)];
 const ageAt=(p,ri)=>p.age-(+p.rep.at(-1).d.slice(0,4)-(+p.rep[ri].d.slice(0,4)));
@@ -625,7 +687,7 @@ function summary(p,i){const S=SENT.map(s=>({s,o:runSent(p,i,s)}));const C=cohort
   const amp=H.find(x=>x.h.n==='SUGAR → CARDIAC').o.c==='bad';
   const sc=fires*3+chi*2+flg.filter(x=>M[x.k].c!=='VITALS'&&(x.g.s==='hi'||x.g.s==='lo')).length+(amp?2:0);
   const lvl=sc>=16?'Critical':sc>=9?'High':sc>=4||acute?'Moderate':'Low';
-  const alerts=[];if(acute)alerts.push(`hs-CRP ${fmt(get(p,i,'HSCRP').v)} mg/L is in the acute range. Repeat test advised.`);
+  const alerts=gate2(p,i).map(x=>`CRITICAL VALUE · ${M[x.k].full} ${fmt(x.v)} ${M[x.k].u} (Gate 2 limit: ${x.l}). Critical-value pathway started: named clinician notified.`);if(acute)alerts.push(`hs-CRP ${fmt(get(p,i,'HSCRP').v)} mg/L is in the acute range. Repeat test advised.`);
   const sm={S,C,H,labs,flg,fires,chi,acute,sc,lvl,alerts,amp};sm.prompts=prompts(p,i,sm);return sm;}
 const EVLIB=[
  ['ALAKL','Prediabetes cohort; metabolic sentinel; prediabetes drift prompt','Live'],
@@ -659,7 +721,7 @@ const state={view:'dashboard',pi:0,at:{},tab:'marker',cat:null,only:false,vel:nu
 const atOf=i=>state.at[i]??P[i].rep.length-1;
 const riskChip=l=>`<span class="chip ${l==='Critical'||l==='High'?'bad':l==='Moderate'?'warn':'ok'}">${l}</span>`;
 const ICON={dash:'<rect x="2" y="2" width="5" height="5" rx="1"/><rect x="9" y="2" width="5" height="5" rx="1"/><rect x="2" y="9" width="5" height="5" rx="1"/><rect x="9" y="9" width="5" height="5" rx="1"/>',up:'<path d="M8 11V3M4.5 6.5 8 3l3.5 3.5M3 13h10"/>',pts:'<circle cx="6" cy="5" r="2.5"/><path d="M1.5 14c.6-2.6 2.3-4 4.5-4s3.9 1.4 4.5 4M11 3.5a2 2 0 0 1 0 4M12.5 10c1.2.5 2 1.8 2.3 4"/>',rep:'<rect x="3" y="2" width="10" height="12" rx="1.5"/><path d="M6 10V8M8 10V6M10 10V7"/>',pulse:'<path d="M1.5 8h3l2-4 3 8 2-4h3"/>',bulb:'<path d="M6 12h4M6.5 14h3M8 2a4 4 0 0 0-2.4 7.2c.5.4.9 1 .9 1.8h3c0-.8.4-1.4.9-1.8A4 4 0 0 0 8 2z"/>',gear:'<circle cx="8" cy="8" r="2.2"/><path d="M8 1.5v2M8 12.5v2M1.5 8h2M12.5 8h2M3.4 3.4l1.4 1.4M11.2 11.2l1.4 1.4M3.4 12.6l1.4-1.4M11.2 4.8l1.4-1.4"/>'};
-const NAV=[['OVERVIEW',[['dashboard','Dashboard','dash']]],['DATA & PATIENTS',[['ingest','Data ingestion','up'],['patients','Patients','pts']]],['CLINICAL INTELLIGENCE',[['reports','Clinical reports','rep']]],['POPULATION',[['pop','Population health','pulse']]],['ADMINISTRATION',[['evidence','Related QBRI work','bulb'],['settings','Settings','gear']]]];
+const NAV=[['OVERVIEW',[['dashboard','Dashboard','dash'],['nextphase','Live data & AI','bulb']]],['DATA & PATIENTS',[['ingest','Live lab feed','up'],['patients','Patients','pts']]],['CLINICAL INTELLIGENCE',[['reports','Clinical reports','rep']]],['POPULATION',[['pop','Population health','pulse']]],['ADMINISTRATION',[['evidence','Related QBRI work','bulb'],['settings','Settings','gear']]]];
 function renderSide(){const cur=state.view==='analysis'?'patients':state.view;
   $('side').innerHTML=`<div class="brand"><b>Burakomics</b><span>Health Analytics · POC</span></div>`+NAV.map(([h,items])=>`<div class="navgrp"><h4>${h}</h4>${items.map(([id,l,ic])=>`<button class="nav" data-nav="${id}" aria-current="${cur===id?'page':'false'}"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">${ICON[ic]}</svg>${l}</button>`).join('')}</div>`).join('')+`<div class="me"><i>SA</i><div>Super Administrator<small>Superadmin</small></div></div>`;}
 const ALL=()=>P.map((p,i)=>({p,i,ri:p.rep.length-1,sm:summary(p,p.rep.length-1)}));
@@ -790,7 +852,7 @@ function renderPop(){const A=ALL();const dists=[...new Set(P.map(p=>p.dist))];co
 
 /* ======================= PATIENTS ======================= */
 /* ======================= ANALYSIS ======================= */
-const TABS=[['marker','Marker Profile'],['inflam','Inflammatory Index'],['sentinel','Sentinel Score'],['cohort','Disease Cohort'],['handshake','System Handshake'],['velocity','Velocity Analysis'],['report','Report Center']];
+const TABS=[['marker','Marker Profile'],['inflam','Inflammatory Index'],['sentinel','Sentinel Score'],['cohort','Disease Cohort'],['handshake','System Handshake'],['velocity','Velocity Analysis'],['report','Report Center'],['ask','Ask Burak · AI preview']];
 function sentCard(p,ri,s,o){const c=o.state==='fire'?'':o.state==='watch'?'warn':'ok';
   const rows=o.rs.map(x=>{const g=x.g,u=unitOf(x.k);let box,st='';
     if(x.ok===null){box=`<span class="svb nx">${g.s==='ac'?'Repeat test':'Not tested'}</span>`;}
@@ -845,11 +907,94 @@ function renderSettings(){
    <tr><td><b>40–64</b></td><td style="white-space:normal">As above, plus cholesterol (with ApoB and Lp(a))</td><td>Every 3 years</td></tr>
    <tr><td><b>65–75</b></td><td style="white-space:normal">As above, plus vitamin D</td><td>Every 3 years; vitamin D every year</td></tr></tbody></table></div></div>
   <div class="scope">Burak flags results for clinical review. It does not diagnose or recommend treatment.</div>`;}
-function renderIngest(){return `<div class="card" style="padding:0"><div class="mp-top"><b>DATA INGESTION</b></div>
-  <div class="tablewrap"><table><thead><tr><th>File</th><th>Columns</th><th>Status</th></tr></thead><tbody>
-  <tr><td><b>Lab reports (PDF / CSV)</b></td><td style="white-space:normal">patient_id, sample_date, marker_code, value, unit</td><td><span class="chip ok">Existing</span></td></tr>
-  <tr><td><b>patient.csv</b></td><td style="white-space:normal">patient_id, age, sex, district</td><td><span class="chip warn">+1 column</span></td></tr></tbody></table></div></div>
-  <div class="card" style="padding:0"><div class="mp-top"><b>RECENT PAYLOADS</b></div><div class="tablewrap"><table><thead><tr><th>Patient</th><th>Reports</th><th>Last received</th></tr></thead><tbody>${P.map((p,i)=>`<tr class="rowlink" tabindex="0" data-open="${i}"><td><b>${p.id}</b></td><td>${p.rep.length}</td><td>${p.rep.at(-1).d}</td></tr>`).join('')}</tbody></table></div></div>`;}
+function renderIngest(){const open=ESC.filter(e=>e.st!=='ack');
+ return `<div class="lf-top"><div class="card lf-feed"><div class="lf-hd"><div><div class="eb">LIVE LAB & EHR FEED</div><b>${FEED.on?'<span class="dot on"></span>Receiving':'<span class="dot"></span>Paused'}</b> <span class="small">· simulated LIS connection · HL7 v2 ORU^R01 and FHIR R4 Observation</span></div>
+   <div class="lf-btns"><button class="btn pri" id="feedGo">${FEED.on?'Pause feed':FEED.i?'Resume feed':'Start live feed'}</button><button class="btn" id="feedStep" ${FEED.i>=MSGS.length?'disabled':''}>Next message</button><button class="btn" id="feedReset">Reset</button></div></div>
+   <div class="lf-steps"><span>Receive</span><i>→</i><span>Validate</span><i>→</i><span>Match patient</span><i>→</i><span>Map code + unit</span><i>→</i><span class="g2">Gate 2 first</span><i>→</i><span>Add to timeline</span><i>→</i><span>Re-run Burak</span></div>
+   ${FEED.log.length?`<div class="tablewrap"><table class="lf-t"><thead><tr><th>Received</th><th>Source</th><th>Patient</th><th>Results</th><th>Outcome</th></tr></thead><tbody>${FEED.log.slice().reverse().map(x=>`<tr><td class="num">${x.t}</td><td><span class="fmt">${x.m.fmt}</span><div class="small">${x.m.src}</div></td><td>${x.pi!=null?`<button class="linkbtn" data-open="${x.pi}">${x.m.pid}</button>`:`<b>${x.m.pid}</b>`}</td><td style="white-space:normal">${x.res.map(r=>`${M[r.k].full} <b>${fmt(r.v)}</b> ${M[r.k].u}${r.conv?` <span class="small">(${r.conv})</span>`:''}`).join('<br>')||'<span class="small">—</span>'}<details><summary class="small">Raw message</summary><pre class="raw">${esc(x.m.raw)}</pre></details></td><td style="white-space:normal">${x.out.map(o=>`<span class="chip ${o[0]}">${o[1]}</span>`).join(' ')}</td></tr>`).join('')}</tbody></table></div>`:`<p class="small" style="padding:4px 2px">No messages yet. Press <b>Start live feed</b>: ${MSGS.length} scripted results arrive from the lab and EHR between screening rounds, including two critical values, one unmatched patient and one duplicate.</p>`}
+  </div>
+  <div class="card lf-esc"><div class="eb" style="color:#b42318">CRITICAL-VALUE ESCALATION</div><b>${open.length?`${open.length} open`:'No open critical values'}</b>
+   <p class="small" style="margin:2px 0 8px">Gate 2 fires → named clinician notified → acknowledge within the site’s limit (demo: ${ESC_SECS} s stands for 30 min) → otherwise escalates to the clinical lead. The lab’s own critical-call policy comes first.</p>
+   ${ESC.length?ESC.slice().reverse().map(e=>`<div class="escc ${e.st}"><div class="row"><b>${e.pid}</b><span class="chip ${e.st==='ack'?'ok':'bad'}">${e.st==='ack'?'ACKNOWLEDGED':e.st==='esc'?'ESCALATED · CLINICAL LEAD':'AWAITING ACK'}</span></div>
+     <div>${M[e.k].full} <b>${fmt(e.v)} ${M[e.k].u}</b> <span class="small">· limit ${e.l}</span></div>
+     <div class="small">Notified: ${e.st==='esc'||e.lead?'on-call clinician, then clinical lead':'on-call clinician (demo)'} · ${e.t}</div>
+     ${e.st!=='ack'?`<div class="row" style="margin-top:6px"><span class="small" id="esct-${e.id}">${e.st==='esc'?'Overdue: escalated':`${Math.max(0,Math.ceil((e.due-Date.now())/1000))} s left to acknowledge`}</span><button class="btn pri sm" data-ack="${e.id}">Acknowledge</button></div>`:`<div class="small">Acknowledged by Dr. Demo (on-call) · ${e.ackT}</div>`}</div>`).join(''):'<div class="small">Critical values from the feed appear here.</div>'}
+  </div></div>
+ <div class="lf-two"><div class="card"><div class="eb">IMPORT A FHIR R4 BUNDLE</div><b>Paste results from an EHR export</b>
+   <p class="small" style="margin:2px 0 8px">Observations are read by LOINC code, units converted, and identifying fields removed before anything is stored.</p>
+   <textarea id="fhirIn" spellcheck="false" aria-label="FHIR bundle JSON">${esc(state.fhir??FHIR_SAMPLE)}</textarea>
+   <div class="row" style="margin-top:8px;gap:8px;flex-wrap:wrap"><button class="btn pri" id="fhirGo">Validate and import</button><button class="btn" id="fhirSample">Load sample</button></div>
+   ${state.fhirRes?state.fhirRes:''}</div>
+  <div class="card"><div class="eb">AUDIT LOG</div><b>Every step is recorded</b>
+   <p class="small" style="margin:2px 0 8px">Who, what and when, with no patient names or identifiers in the log. AI questions are logged as an event, not as text.</p>
+   <div class="audit">${AUDIT.length?AUDIT.slice().reverse().slice(0,40).map(a=>`<div><span class="num">${a[0]}</span><span class="ak">${a[1]}</span><span>${esc(a[2])}</span></div>`).join(''):'<div class="small">Nothing yet.</div>'}</div></div></div>
+ <div class="card" style="padding:0"><div class="mp-top"><b>PATIENT TIMELINES</b><span class="small">Screening rounds plus results received between rounds</span></div><div class="tablewrap"><table><thead><tr><th>Patient</th><th>Screening rounds</th><th>Between-round results</th><th>Last received</th><th>Watch</th></tr></thead><tbody>${P.map((p,i)=>{const live=p.rep.filter(r=>r.live).length;const g=gate2(p,p.rep.length-1).length;return `<tr class="rowlink" tabindex="0" data-open="${i}"><td><b>${p.id}</b></td><td class="num">${p.rep.length-live}</td><td class="num">${live||'—'}</td><td class="num">${p.rep.at(-1).d}</td><td>${g?'<span class="chip bad">CRITICAL</span>':live?'<span class="chip warn">NEW RESULT</span>':''}</td></tr>`;}).join('')}</tbody></table></div></div>`;}
+/* ---------- live feed simulation ---------- */
+const LOINC={'1558-6':['GLU','mg/dL',1/18.016],'14771-0':['GLU','mmol/L',1],'4548-4':['A1C','%',1],'13457-7':['LDL','mg/dL',1/38.67],'18262-6':['LDL','mg/dL',1/38.67],'2093-3':['TC','mg/dL',1/38.67],'2085-9':['HDL','mg/dL',1/38.67],'2571-8':['TG','mg/dL',1/88.57],'2160-0':['CREA','mg/dL',88.42],'14682-9':['CREA','µmol/L',1],'98979-8':['EGFR','mL/min/1.73m²',1],'62238-1':['EGFR','mL/min/1.73m²',1],'1742-6':['ALT','U/L',1],'1920-8':['AST','U/L',1],'718-7':['HB','g/dL',1],'777-3':['PLT','10*3/uL',1],'6690-2':['WBC','10*3/uL',1],'30522-7':['HSCRP','mg/L',1],'3016-3':['TSH','mIU/L',1],'1751-7':['ALB','g/dL',1],'1884-6':['APOB','g/L',1],'1989-3':['VITD','ng/mL',2.496]};
+const hl7=(id,ts,obx)=>`MSH|^~\\&|LIS|DEMO-LAB|BURAK|SCREENING|${ts}||ORU^R01|M${ts.slice(-6)}|P|2.5.1\nPID|1||${id}^^^DEMO^MR||[redacted]||[redacted]|\nOBR|1||ACC${ts.slice(-5)}|24331-1^Lab panel^LN|||${ts}\n`+obx.map((o,j)=>`OBX|${j+1}|NM|${o[0]}^${o[3]}^LN||${o[1]}|${o[2]}||${o[4]||'N'}|||F`).join('\n');
+const fhirObs=(id,dt,obx)=>JSON.stringify({resourceType:'Bundle',type:'transaction',entry:obx.map(o=>({resource:{resourceType:'Observation',status:'final',code:{coding:[{system:'http://loinc.org',code:o[0],display:o[3]}]},subject:{identifier:{value:id}},effectiveDateTime:dt,valueQuantity:{value:o[1],unit:o[2]}}}))},null,1);
+const MSGS=[
+ {pid:'DEMO-1821',d:'2026-11-02',fmt:'FHIR R4',src:'Primary care EHR',obx:[['4548-4',6.1,'%','HbA1c'],['1558-6',108,'mg/dL','Glucose fasting','H']]},
+ {pid:'DEMO-4220',d:'2026-11-03',fmt:'HL7 v2',src:'Hospital LIS',obx:[['14682-9',138,'µmol/L','Creatinine','H'],['98979-8',47,'mL/min/1.73m²','eGFR','L']]},
+ {pid:'DEMO-4012',d:'2026-11-04',fmt:'HL7 v2',src:'Hospital LIS',obx:[['1558-6',486,'mg/dL','Glucose fasting','HH']]},
+ {pid:'DEMO-7781',d:'2026-11-04',fmt:'HL7 v2',src:'Private lab',obx:[['4548-4',5.5,'%','HbA1c']]},
+ {pid:'DEMO-4108',d:'2026-11-05',fmt:'FHIR R4',src:'Specialist clinic EHR',obx:[['13457-7',205,'mg/dL','LDL cholesterol','H']]},
+ {pid:'DEMO-4220',d:'2026-11-03',fmt:'HL7 v2',src:'Hospital LIS',dup:true,obx:[['14682-9',138,'µmol/L','Creatinine','H'],['98979-8',47,'mL/min/1.73m²','eGFR','L']]},
+ {pid:'DEMO-1907',d:'2026-11-06',fmt:'FHIR R4',src:'Primary care EHR',obx:[['718-7',6.4,'g/dL','Hemoglobin','LL'],['777-3',212,'10*3/uL','Platelets']]}];
+MSGS.forEach(m=>{const ts=m.d.replace(/-/g,'')+'0830'+String(m.obx[0][1]).replace('.','').slice(0,2);m.raw=m.fmt==='HL7 v2'?hl7(m.pid,ts,m.obx):fhirObs(m.pid,m.d+'T08:30:00+03:00',m.obx);});
+const FEED={on:false,i:0,log:[],timer:null,seen:new Set()};const ESC=[];const AUDIT=[];const ESC_SECS=45;let ESCID=0;
+const nowT=()=>new Date().toTimeString().slice(0,8);
+const audit=(k,t)=>AUDIT.push([nowT(),k,t]);
+const OPENESC=p=>ESC.filter(e=>e.pid===p.id&&e.st!=='ack');
+function mapObx(obx){const res=[],bad=[];for(const [code,v,u] of obx){const L=LOINC[code];if(!L){bad.push(code);continue;}let val=+v,conv='';if(u!==L[1]&&!(L[1]==='10*3/uL')){bad.push(code+' unit '+u);continue;}if(L[2]!==1){val=Math.round(v*L[2]*10)/10;conv=`${v} ${u} → ${M[L[0]].u}`;}res.push({k:L[0],v:val,conv});}return {res,bad};}
+function ingestResults(pid,d,res,via){const pi=P.findIndex(p=>p.id===pid);if(pi<0)return {pi:null,out:[['warn','NO PATIENT MATCH · HELD FOR MANUAL REVIEW']]};
+ const p=P[pi];const v={};res.forEach(x=>v[x.k]=x.v);const rep={d,v,pk:Object.keys(v),live:true};
+ let ri=p.rep.findIndex(r=>r.d>d);if(ri<0){p.rep.push(rep);ri=p.rep.length-1;}else p.rep.splice(ri,0,rep);
+ delete state.at[pi];const out=[['ok','ADDED TO TIMELINE']];audit('INGEST',`${via}: ${res.length} result(s) added to ${pid} timeline`);
+ const g=gate2(p,ri);if(g.length){out.unshift(['bad','GATE 2 · CRITICAL']);g.forEach(x=>{const e={id:++ESCID,pid,k:x.k,v:x.v,l:x.l,t:nowT(),due:Date.now()+ESC_SECS*1000,st:'open'};ESC.push(e);audit('GATE 2',`Critical ${M[x.k].full} for ${pid}; on-call clinician notified`);});}
+ else{const sm=summary(p,ri);const fl=res.filter(x=>flagged(get(p,ri,x.k).s));if(fl.length)out.push(['warn',`${fl.length} OUT OF RANGE · RE-SCORED · RISK ${sm.lvl.toUpperCase()}`]);
+  if(res.some(x=>x.k==='LDL'&&x.v>=4.9))out.push(['bad','ALWAYS-SHOW FINDING · LDL ≥ 4.9']);
+  if(res.some(x=>x.k==='EGFR'&&x.v<60))out.push(['warn','KIDNEY WATCH LIST · REPEAT IN 3 MONTHS']);
+  if(res.some(x=>x.k==='A1C'&&x.v>=5.7&&x.v<6.5))out.push(['warn','PREDIABETES WATCH LIST']);}
+ return {pi,out};}
+function feedStep(){if(FEED.i>=MSGS.length){FEED.on=false;clearInterval(FEED.timer);return;}const m=MSGS[FEED.i++];
+ const key=m.pid+m.d+JSON.stringify(m.obx);let r;const {res,bad}=mapObx(m.obx);
+ audit('RECEIVE',`${m.fmt} message from ${m.src}`);
+ if(FEED.seen.has(key)){r={pi:P.findIndex(p=>p.id===m.pid),out:[['na','DUPLICATE · IGNORED']]};audit('REJECT','Duplicate message ignored');}
+ else{FEED.seen.add(key);r=ingestResults(m.pid,m.d,res,m.fmt);if(r.pi==null)audit('HOLD',`Unmatched identifier; held for manual matching`);}
+ if(r.pi<0)r.pi=null;if(bad.length)r.out.push(['warn','UNMAPPED: '+bad.join(', ')]);
+ FEED.log.push({t:nowT(),m,res,pi:r.pi,out:r.out});if(FEED.i>=MSGS.length){FEED.on=false;clearInterval(FEED.timer);}
+ if(state.view==='ingest'||state.view==='analysis')render();}
+function feedReset(){clearInterval(FEED.timer);FEED.on=false;FEED.i=0;FEED.log=[];FEED.seen.clear();ESC.length=0;P.forEach((p,i)=>{p.rep=p.rep.filter(r=>!r.live);delete state.at[i];});audit('RESET','Demo feed reset');render();}
+setInterval(()=>{let ch=false;for(const e of ESC){if(e.st==='open'&&Date.now()>e.due){e.st='esc';e.lead=true;audit('ESCALATE',`No acknowledgement in time for ${e.pid}; clinical lead notified`);ch=true;}
+  const el=document.getElementById('esct-'+e.id);if(el&&e.st==='open')el.textContent=`${Math.max(0,Math.ceil((e.due-Date.now())/1000))} s left to acknowledge`;}
+ if(ch&&(state.view==='ingest'||state.view==='analysis'))render();},1000);
+const FHIR_SAMPLE=JSON.stringify({resourceType:'Bundle',type:'collection',entry:[
+ {resource:{resourceType:'Patient',identifier:[{system:'urn:demo:mrn',value:'DEMO-4402'}],name:[{family:'Example',given:['Test']}],birthDate:'1965-03-14',telecom:[{system:'phone',value:'+000 0000 0000'}]}},
+ {resource:{resourceType:'Observation',status:'final',code:{coding:[{system:'http://loinc.org',code:'1884-6',display:'Apolipoprotein B'}]},subject:{identifier:{value:'DEMO-4402'}},effectiveDateTime:'2026-11-08',valueQuantity:{value:1.42,unit:'g/L'}}},
+ {resource:{resourceType:'Observation',status:'final',code:{coding:[{system:'http://loinc.org',code:'2571-8',display:'Triglycerides'}]},subject:{identifier:{value:'DEMO-4402'}},effectiveDateTime:'2026-11-08',valueQuantity:{value:221,unit:'mg/dL'}}},
+ {resource:{resourceType:'Observation',status:'preliminary',code:{coding:[{system:'http://loinc.org',code:'2085-9',display:'HDL cholesterol'}]},subject:{identifier:{value:'DEMO-4402'}},effectiveDateTime:'2026-11-08',valueQuantity:{value:36,unit:'mg/dL'}}}]},null,1);
+function fhirImport(txt){let b;try{b=JSON.parse(txt);}catch(e){return `<div class="fres bad"><b>Rejected:</b> not valid JSON.</div>`;}
+ if(!b||b.resourceType!=='Bundle'||!Array.isArray(b.entry))return `<div class="fres bad"><b>Rejected:</b> expected a FHIR R4 Bundle with entries.</div>`;
+ const rs=b.entry.map(e=>e&&e.resource).filter(Boolean);const pt=rs.find(r=>r.resourceType==='Patient');const stripped=[];
+ if(pt){['name','telecom','address','birthDate'].forEach(f=>{if(pt[f]!=null)stripped.push(f==='birthDate'?'birth date (age kept)':f);});}
+ const obs=rs.filter(r=>r.resourceType==='Observation');const rows=[],use=[];let pid=null;
+ obs.forEach(o=>{const c=o.code?.coding?.find(x=>/loinc/.test(x.system||''));const q=o.valueQuantity;const sid=o.subject?.identifier?.value||pt?.identifier?.[0]?.value;pid=pid||sid;
+  if(!c||!q||typeof q.value!=='number'){rows.push([c?.display||'Observation','—','Skipped: no LOINC code or numeric value','na']);return;}
+  if(o.status!=='final'&&o.status!=='amended'){rows.push([c.display||c.code,`${q.value} ${q.unit||''}`,`Held: status “${o.status}”, only final results are scored`,'warn']);return;}
+  const m=mapObx([[c.code,q.value,q.unit]]);if(!m.res.length){rows.push([c.display||c.code,`${q.value} ${q.unit||''}`,'Skipped: code or unit not mapped','warn']);return;}
+  const x=m.res[0];use.push({x,d:(o.effectiveDateTime||'').slice(0,10)});rows.push([M[x.k].full,`${fmt(x.v)} ${M[x.k].u}`,x.conv?`Mapped · ${x.conv}`:'Mapped','ok']);});
+ let res='';if(use.length&&pid){const d=use[0].d||'2026-11-08';const r=ingestResults(pid,d,use.map(u=>u.x),'FHIR import');res=r.out.map(o=>`<span class="chip ${o[0]}">${o[1]}</span>`).join(' ')+(r.pi!=null?` <button class="linkbtn" data-open="${r.pi}">Open ${esc(pid)}</button>`:'');}
+ audit('FHIR',`Bundle validated: ${obs.length} observation(s), ${use.length} imported`);
+ return `<div class="fres"><div class="small" style="margin-bottom:6px">Patient <b>${esc(pid||'not identified')}</b>${stripped.length?` · removed before storage: ${stripped.join(', ')}`:''}</div><div class="tablewrap"><table><thead><tr><th>Observation</th><th>Value</th><th>Result</th></tr></thead><tbody>${rows.map(r=>`<tr><td>${esc(r[0])}</td><td class="num">${esc(r[1])}</td><td style="white-space:normal"><span class="chip ${r[3]}">${esc(r[2])}</span></td></tr>`).join('')}</tbody></table></div><div style="margin-top:8px">${res}</div></div>`;}
+document.addEventListener('click',e=>{
+ if(e.target.closest('#feedGo')){if(FEED.on){FEED.on=false;clearInterval(FEED.timer);audit('FEED','Feed paused');}else{FEED.on=true;audit('FEED','Feed connected (simulated)');feedStep();if(FEED.on)FEED.timer=setInterval(feedStep,2600);}render();return;}
+ if(e.target.closest('#feedStep')){feedStep();render();return;}
+ if(e.target.closest('#feedReset')){feedReset();return;}
+ const a=e.target.closest('[data-ack]');if(a){const x=ESC.find(z=>z.id===+a.dataset.ack);if(x){x.st='ack';x.ackT=nowT();audit('ACK',`Critical value for ${x.pid} acknowledged by on-call clinician`);}render();return;}
+ if(e.target.closest('#fhirGo')){state.fhir=$('fhirIn').value;state.fhirRes=fhirImport(state.fhir);render();return;}
+ if(e.target.closest('#fhirSample')){state.fhir=FHIR_SAMPLE;state.fhirRes='';render();return;}});
+document.addEventListener('input',e=>{if(e.target.id==='fhirIn')state.fhir=e.target.value;});
 document.head.insertAdjacentHTML('beforeend',`<style>
 .ph{display:flex;align-items:center;gap:16px;flex-wrap:wrap;border-radius:14px;padding:16px 18px;color:#fff;background:linear-gradient(120deg,#0f9d8f,#0b78c8)}
 .ph .av{width:50px;height:50px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;font-weight:800;font-size:15px;flex:none}
@@ -987,7 +1132,7 @@ function lineScdi(p,ri,c){const ks=Object.keys(M).filter(k=>M[k].c===c).map(k=>(
   return {v,lvl,lab:lvl==='ok'?'Stable':lvl==='hi'?'High drift':'Moderate drift',n:fl.length};}
 
 function renderAnalysis(){const p=P[state.pi],ri=atOf(state.pi),sm=summary(p,ri),bd=burden(p,ri);
-  const opts=p.rep.map((r,i)=>`<option value="${i}" ${i===ri?'selected':''}>Report ${i+1} · ${r.d}${r.pk?' (vitamin D only)':''}</option>`).join('');
+  const opts=p.rep.map((r,i)=>`<option value="${i}" ${i===ri?'selected':''}>Report ${i+1} · ${r.d}${r.live?' · between-round result':r.pk?' (vitamin D only)':''}</option>`).join('');
   const nextDue=(()=>{const l=p.rep.filter(r=>!r.pk).at(-1).d;return (+l.slice(0,4)+3)+l.slice(4);})();
   const byCat={};bd.ab.forEach(x=>{byCat[M[x.k].c]=(byCat[M[x.k].c]||0)+1;});const top=Object.entries(byCat).sort((a,b)=>b[1]-a[1]);
   const code=bd.ab.length<=2?'S1':bd.ab.length<=6?'S2':bd.ab.length<=12?'S3':'S4',cb=bd.ab.length>=8?'Elevated':bd.ab.length>=4?'Moderate':'Low';
@@ -1000,9 +1145,9 @@ function renderAnalysis(){const p=P[state.pi],ri=atOf(state.pi),sm=summary(p,ri)
    <div class="card ${sm.lvl==='High'||sm.lvl==='Critical'?'risk':''}"><div class="eb">⊘ Clinical risk</div>${sm.alerts.length?'<div class="force">FORCE HIGH RISK ACTIVE</div>':''}<div class="bigger">${sm.lvl} <span class="small">Score ${sm.sc}</span></div><div class="small" style="font-size:11px">${sm.fires} sentinel(s) · ${sm.chi} high-risk cohort(s)</div></div>
    <div class="card"><div class="eb">◌ SCDI burden</div><div class="bigger">${bd.ratio>0.45?'High':bd.ratio>0.2?'Moderate':'Low'}</div><div class="small" style="font-size:11px">Marker ${fmt(bd.mean)} &nbsp; Ratio ${fmt(bd.ratio)}</div><div class="chips" style="margin-top:6px">${top.slice(0,3).map(t=>`<span class="chip blue">${catName(t[0])}</span>`).join('')}</div></div>
    <div class="card"><div class="eb">⚠ Clinical burden</div><div class="bigger">${cb}</div><div class="small" style="font-size:11px">${bd.ab.length} of ${bd.ms.length} markers out of range</div><ul class="blist">${bd.worst.map(w=>`<li>${w.g.s==='lo'?'Low':w.g.s==='md'?'Borderline':'Elevated'} ${M[w.k].full}</li>`).join('')}</ul></div></div>
-  ${sm.alerts.length?`<div class="alerts"><h3>⚠ HARD ALERTS (${sm.alerts.length})</h3>${sm.alerts.map(a=>`<div class="a">${esc(a)}</div>`).join('')}</div>`:''}
+  ${sm.alerts.length?`<div class="alerts"><h3>⚠ HARD ALERTS (${sm.alerts.length})</h3>${OPENESC(p).length?`<div class="a" style="border-color:#dc2626"><b>Escalation open:</b> ${OPENESC(p).map(e=>`${M[e.k].full} · ${e.st==='esc'?'escalated to clinical lead':'awaiting acknowledgement'}`).join('; ')} <button class="linkbtn" data-nav="ingest">Open escalation queue</button></div>`:''}${sm.alerts.map(a=>`<div class="a">${esc(a)}</div>`).join('')}</div>`:''}
   ${sm.prompts.length?`<div class="prompts"><h3>ℹ CLINICAL PROMPTS (${sm.prompts.length})</h3>${sm.prompts.map(x=>`<div class="a">${esc(x.t)}${evTag(x.ev)}</div>`).join('')}</div>`:''}
-  <div style="display:flex;flex-direction:column;gap:16px">${({marker:tMarker,inflam:tInflam,sentinel:tSentinel,cohort:tCohort,handshake:tHandshake,velocity:tVelocity,report:tReport})[state.tab](p,ri,sm)}</div>`;}
+  <div style="display:flex;flex-direction:column;gap:16px">${({marker:tMarker,inflam:tInflam,sentinel:tSentinel,cohort:tCohort,handshake:tHandshake,velocity:tVelocity,report:tReport,ask:tAsk})[state.tab](p,ri,sm)}</div>`;}
 
 function lineInsight(p,ri,sm,c){const ls=lineScdi(p,ri,c);const keys=Object.keys(M).filter(k=>M[k].c===c);
   const rows=keys.map(k=>({k,g:get(p,ri,k)})).filter(x=>x.g.v!=null);const fl=rows.filter(x=>flagged(x.g.s));
@@ -1318,9 +1463,110 @@ function tMarker(p,ri,sm){
    <div class="ctabs" role="group" aria-label="Marker category">${avail.map(c=>{const n=Object.keys(M).filter(k=>M[k].c===c[0]&&flagged(get(p,ri,k).s)).length;return `<button class="ctab" data-cat="${c[0]}" aria-pressed="${c[0]===state.cat}">${c[1].toUpperCase()}<small>${n?n+' flagged':'&nbsp;'}</small></button>`;}).join('')}</div>
    <div class="foot">Click a marker for its trend and related research. SCDI = value ÷ nearest reference limit (1.00 = at the limit).</div></div>`;}
 
-const TITLES={dashboard:['Dashboard','Overview of patients and reports · illustrative data'],patients:['Patients','Open a patient to see the Burak analysis'],analysis:['Clinical Data Intake & Baseline','View detailed clinical analysis and patient reports'],ingest:['Data ingestion','Lab payloads'],settings:['Settings','Reference ranges and tests by age group'],reports:['Clinical reports','Generated patient reports'],pop:['Population health','Results added up by district and age group'],evidence:['Related QBRI work','Research behind the Burak rules in this workspace']};
+
+/* ======================= NEXT PHASE (Future Health feedback) ======================= */
+const PROD_URL="https://burakomics-backend-705486089059.us-central1.run.app/login?redirect=/app/org/728d5aec-6750-488c-9021-f4e6732c63e0/workspace/c35f99d7-d820-4012-8485-63317b96fdb9/coming-soon?feature=Dashboard";
+function renderNext(){return `<div class="np-hero"><h2>From illustrative demo to live prevention programme</h2><p>Burak’s production pipeline already runs on Google Cloud with secure login. The next phase connects it to live laboratory feeds and longitudinal records, adds an AI assistant grounded in Gulf guidelines and regional research, and keeps three lines firm: risk stratification is not diagnosis, clinical data stays protected, and critical values always escalate.</p>
+  <p style="margin-top:12px"><a class="prod-btn" style="display:inline-block;font-size:14px;padding:10px 16px" href="${PROD_URL}" target="_blank" rel="noopener">Open Burak production ↗</a></p></div>
+ <div class="np-grid">
+  <div class="np-card"><span class="k">1 · LIVE LAB FEEDS & LONGITUDINAL EHR</span><h3>Track real cohorts between screening rounds</h3><button class="btn pri sm" style="align-self:flex-start" data-nav="ingest">See it working: Live lab feed →</button>
+   <div class="flow2"><span>Lab system (LIS)</span><i>→</i><span>HL7 v2 ORU / FHIR R4 Observation</span><i>→</i><span>Secure ingest, in-country cloud</span><i>→</i><span>Patient matching + unit mapping</span><i>→</i><span>Burak pipeline</span><i>→</i><span>Recall & follow-up lists</span></div>
+   <ul><li>Every new result is added to the person’s timeline the moment the lab releases it, not only at the next screening round.</li>
+   <li>Longitudinal records from the EHR (diagnoses, medicines, past results) give the context rules already ask for: fasting, pregnancy, known diabetes, treatment.</li>
+   <li>Between-round watch lists: people whose HbA1c, liver or kidney markers are drifting are surfaced for recall before the next scheduled visit.</li>
+   <li>Each programme keeps its own workspace, reference values and cohorts, versioned and audited.</li></ul></div>
+  <div class="np-card"><span class="k">2 · AI ASSISTANT (RAG)</span><h3>Ask why a patient is drifting, and get cited answers</h3><button class="btn pri sm" style="align-self:flex-start" data-open="3" data-opentab="ask">See it working: Ask Burak →</button>
+   <div class="flow2"><span>Clinician question</span><i>→</i><span>Retrieve from curated library</span><i>→</i><span>Add patient’s Burak findings (de-identified)</span><i>→</i><span>Answer with citations</span><i>→</i><span>Clinician decides</span></div>
+   <ul><li><b>Grounded library:</b> national and Gulf clinical guidelines, international standards the region follows (ADA, KDIGO, EASL–EASD–EASO, ESC/EAS), and regional research such as QBRI and Qatar Biobank studies.</li>
+   <li><b>Explainable:</b> every statement cites its source and the Burak rule that fired; if the library has no answer, the assistant says so.</li>
+   <li><b>Preventive, not prescriptive:</b> it suggests considerations for the clinician (repeat tests, lifestyle counselling, referral pathways), never a diagnosis or a prescription.</li>
+   <li>Try it in any patient: the <b>Ask Burak · AI preview</b> tab takes free-text questions, retrieves from a library of guidelines and regional research, and refuses to diagnose or prescribe.</li></ul></div>
+  <div class="np-card"><span class="k">3 · RISK STRATIFICATION, NOT DIAGNOSIS</span><h3>Clear language everywhere</h3>
+   <div class="split"><div class="y"><b>Burak says</b><ul><li>“Pattern consistent with…”</li><li>“2 of 3 criteria met”</li><li>“In prediabetes range”</li><li>“Review may be appropriate”</li></ul></div><div class="n"><b>Burak never says</b><ul><li>A diagnosis</li><li>A risk percentage for a person</li><li>A treatment instruction</li><li>“Healthy” or “all clear” when data is missing</li></ul></div></div>
+   <p class="small" style="margin:0">Every output carries a pre-validation banner and its version until clinical validation is complete.</p></div>
+  <div class="np-card"><span class="k">4 · PROTECTING CLINICAL & MULTI-OMICS DATA</span><h3>Safeguards by design</h3>
+   <ul><li>In-country hosting per jurisdiction (for example Google Cloud Doha for Qatar; a UAE-resident cloud for UAE data), under each site’s data agreement and ethics approval.</li>
+   <li>Encryption in transit and at rest with customer-managed keys; role-based access; full audit trail.</li>
+   <li>De-identified data for analytics and for the AI assistant; no patient data used to train models; no personal data in logs.</li>
+   <li>Separate workspace per institution; data is never pooled across tenants.</li></ul></div>
+ </div>
+ <div class="np-card"><span class="k">5 · CRITICAL-VALUE ESCALATION PATHWAY</span><h3>Safety comes before analytics</h3><button class="btn pri sm" style="align-self:flex-start" data-nav="ingest">See it working: start the feed, then acknowledge →</button>
+  <div class="esc"><div><b>1 · Gate 2 fires</b>A value outside its safe limit (for example potassium, sodium, glucose, haemoglobin).</div><div><b>2 · Alert on top</b>Report marked critical; scores marked “not interpretable”.</div><div><b>3 · Named clinician notified</b>Immediately, by the channel the site chooses.</div><div><b>4 · Acknowledge</b>Must be acknowledged within the site’s time limit.</div><div><b>5 · Escalate & audit</b>No acknowledgement: escalates to the clinical lead; every step logged.</div></div>
+  <p class="small" style="margin:0">The laboratory’s own critical-call policy always comes first; Burak adds a second safety net and never replaces it.</p></div>`;}
+/* ======================= ASK BURAK (preview) ======================= */
+const AQ=[['drift','What is driving this patient’s drift?'],['prevent','What preventive steps could the clinician consider?'],['escalate','Is anything here urgent or for escalation?'],['next','What should be re-tested, and when?']];
+const GUIDE={'PREDIABETES':['ADA Standards of Care: prediabetes','Lifestyle counselling and repeat HbA1c or fasting glucose within a year; consider a structured prevention programme.'],
+ 'TYPE 2 DIABETES PATTERN':['ADA Standards of Care: diagnosis','Confirm with a repeat test before any diagnosis; review with the treating physician.'],
+ 'METABOLIC SYNDROME':['Harmonised criteria (Alberti et al., 2009)','Address weight, blood pressure, lipids and glucose together; lifestyle first.'],
+ 'LIVER FIBROSIS RISK':['EASL–EASD–EASO MASLD guideline 2024','A raised FIB-4 may warrant a second-line test such as elastography, per the local pathway.'],
+ 'ATHEROGENIC DYSLIPIDAEMIA':['ESC/EAS dyslipidaemia guidance','Assess overall cardiovascular risk before any treatment decision.'],
+ 'INHERITED HIGH CHOLESTEROL PATTERN':['ESC/EAS; Dutch Lipid Clinic criteria','Very high LDL: exclude secondary causes; family-history review may be appropriate.'],
+ 'KIDNEY DECLINE':['KDIGO 2024 CKD guideline','Repeat eGFR with urine albumin (UACR) at least 3 months apart before any CKD label.'],
+ 'OBESITY WITH METABOLIC RISK':['Lancet Commission on clinical obesity 2025','Assess organ function and metabolic markers, not BMI alone.'],
+ 'ANAEMIA':['WHO 2024 haemoglobin thresholds','Check iron studies and repeat the blood count.'],
+ 'VITAMIN D DEFICIENCY':['Endocrine Society 2024','Interpret in clinical context; routine testing in healthy adults is not advised.'],
+ 'THYROID–LIPID PATTERN':['Thyroid and lipid co-occurrence','Thyroid function may be contributing to the lipid pattern; correlate with FT4.']};
+function askAnswer(p,ri,sm,q){const fl=sm.flg.filter(x=>M[x.k].c!=='VITALS');const det=sm.S.filter(x=>x.o.state==='fire');const coh=sm.C.filter(x=>x.pct>=67).sort((a,b)=>b.pct-a.pct);let n=0;const cites=[];const cite=t=>{cites.push(t);return `<span class="cite">${cites.length}</span>`;};
+  let body='';
+  if(q==='drift'){body=`<p>${fl.length?`<b>${fl.length}</b> markers are outside their range in this report.`:'No marker is outside its range in this report.'}</p>${fl.length?`<ul>${fl.slice(0,6).map(x=>`<li>${M[x.k].full}: ${fmt(x.g.v)} ${M[x.k].u} (${x.g.lab.toLowerCase()})${cite('Burak marker rule · '+M[x.k].full+' range')}</li>`).join('')}</ul>`:''}
+   ${det.length?`<p>Early-warning sentinels detected: <b>${det.map(x=>scase(x.s.n.replace(' SENTINEL',''))).join(', ')}</b>, where two or more related markers moved together${cite('Burak sentinel rule · 2 of 3 markers')}.</p>`:''}
+   ${coh.length?`<p>Patterns with most criteria met: ${coh.slice(0,3).map(x=>`<b>${scase(x.c.n)}</b>`).join(', ')}${cite('Burak cohort rules')}.</p>`:''}`;}
+  if(q==='prevent'){const coh=sm.C.filter(x=>x.pct>=50).sort((a,b)=>b.pct-a.pct);const g=coh.map(x=>GUIDE[x.c.n]).filter(Boolean);body=g.length?`<p>Considerations for the clinician, based on the patterns above:</p><ul>${coh.filter(x=>GUIDE[x.c.n]).slice(0,4).map(x=>`<li><b>${scase(x.c.n)}</b> (${x.met} of ${x.ev} criteria met): ${GUIDE[x.c.n][1]}${cite(GUIDE[x.c.n][0])}</li>`).join('')}</ul>`:`<p>No pattern currently meets enough criteria to suggest a specific preventive step. Routine screening on the programme schedule applies${cite('Programme screening schedule')}.</p>`;}
+  if(q==='escalate'){const hits=gate2(p,ri).map(x=>({k:x.k,l:x.l,g:{v:x.v}}));
+   const checked=G2.filter(([k])=>p.rep[ri].v[k]!=null).length;
+   body=(hits.length?`<p><b>Yes, critical.</b> ${hits.map(x=>`${M[x.k].full} ${fmt(x.g.v)} ${M[x.k].u} (limit: ${x.l})`).join('; ')}. This follows the critical-value pathway: the named clinician is notified and must acknowledge${cite('Burak Gate 2 · critical-value list')}.</p>`:`<p><b>No critical value.</b> ${checked} of ${G2.length} Gate 2 markers measured in this report are inside their safe limits${cite('Burak Gate 2 · critical-value list')}. Markers not tested are “not evaluated”, never assumed normal.</p>`)
+   +(sm.alerts.length?`<p>Not critical, but flagged: ${sm.alerts.map(esc).join(' ')}</p>`:'')+`<p>Other findings are for routine clinical review.</p>`;}
+  if(q==='next'){const items=[];const k=c=>sm.C.find(x=>x.c.n===c&&x.pct>=50);if(k('PREDIABETES')||k('TYPE 2 DIABETES PATTERN'))items.push(['HbA1c and fasting glucose','within 3–12 months, depending on the range','ADA Standards of Care']);if(k('KIDNEY DECLINE'))items.push(['eGFR with urine albumin (UACR)','at least 3 months after this result','KDIGO 2024']);if(k('LIVER FIBROSIS RISK'))items.push(['Liver tests and FIB-4, or elastography','per the local MASLD pathway','EASL–EASD–EASO 2024']);if(sm.alerts.length)items.push(['hs-CRP','after any acute illness has settled','Burak acute-inflammation rule']);
+   body=items.length?`<ul>${items.map(x=>`<li><b>${x[0]}</b>: ${x[1]}${cite(x[2])}</li>`).join('')}</ul>`:`<p>Next routine screening as scheduled by the programme${cite('Programme screening schedule')}.</p>`;}
+  return body+`<div class="src"><b>Sources</b><br>${cites.map((c,i)=>`${i+1}. ${c}`).join('<br>')}</div><div class="guard">Risk stratification for clinician review. Not a diagnosis or a treatment instruction.</div>`;}
+
+/* ======================= ASK BURAK: retrieval library (preview) ======================= */
+const LIB=[
+ {id:'ADA-PRE',src:'ADA Standards of Care in Diabetes 2025 · Section 2',tags:'prediabetes hba1c glucose sugar diabetes range threshold criteria diagnosis',keys:['A1C','GLU'],t:'Prediabetes is HbA1c 5.7–6.4% or fasting glucose 5.6–6.9 mmol/L. Diabetes is HbA1c ≥6.5% or fasting glucose ≥7.0 mmol/L, and needs two abnormal results to confirm unless symptoms are unequivocal.'},
+ {id:'ADA-PREV',src:'ADA Standards of Care in Diabetes 2025 · Section 3',tags:'prevent prevention prediabetes lifestyle weight loss activity exercise progression delay programme',keys:['A1C','GLU','BMI'],t:'For prediabetes, refer to an intensive lifestyle programme aiming for about 7% weight loss and 150 minutes a week of moderate activity; monitor for progression at least yearly.'},
+ {id:'ALAKL',src:'Al Akl et al., QBRI (regional research)',tags:'qatar gulf prediabetes progression regional prevalence diabetes drift',keys:['A1C','GLU'],t:'About 22% of adults in Qatar have prediabetes, and 5–10% progress to diabetes each year: early drift is common and worth tracking between rounds.'},
+ {id:'KDIGO',src:'KDIGO 2024 CKD guideline',tags:'kidney egfr creatinine ckd renal decline albumin uacr repeat chronic',keys:['EGFR','CREA'],t:'Chronic kidney disease needs eGFR below 60 or signs of kidney damage (such as urine albumin) lasting more than 3 months. Repeat eGFR with urine albumin before any CKD label.'},
+ {id:'BADER',src:'Bader et al., QU / HMC (regional research)',tags:'kidney diabetic tyg triglyceride glucose qatar gulf renal',keys:['EGFR','TG','GLU'],t:'In a Qatari cohort, the TyG index was among the strongest predictors of diabetic kidney disease.'},
+ {id:'EASL',src:'EASL–EASD–EASO MASLD guideline 2024',tags:'liver fib4 fibrosis masld fatty alt ast elastography',keys:['ALT','AST','PLT'],t:'Use FIB-4 first: below 1.3 is low risk; 1.3 or above needs a second test such as elastography; above 2.67 is high risk. For age 65+, the lower cut-off is 2.0.'},
+ {id:'ELHAG',src:'Elhag et al., QU (regional research)',tags:'liver masld fib4 fli qatar gulf sex',keys:['ALT','AST'],t:'In the Qatari population, FLI and FIB-4 separate low- and high-risk fatty liver, with sex-specific patterns.'},
+ {id:'ESC-FH',src:'ESC/EAS dyslipidaemia guideline 2019',tags:'ldl cholesterol lipid familial inherited high very 4.9 190 hypercholesterolaemia',keys:['LDL','TC'],t:'LDL at or above 4.9 mmol/L (190 mg/dL) suggests possible familial hypercholesterolaemia; assess with the Dutch Lipid Clinic criteria and exclude secondary causes such as hypothyroidism.'},
+ {id:'ESC-APOB',src:'ESC/EAS dyslipidaemia guideline 2019',tags:'apob apolipoprotein lipid triglyceride diabetes obesity ldl normal discordant',keys:['APOB','LDL','TG'],t:'ApoB is a better measure of risk than LDL when triglycerides are high or with diabetes or obesity; a high ApoB with normal LDL is a known discordant pattern.'},
+ {id:'TOOR',src:'Toor et al., HBKU / QBRI (regional research)',tags:'ldl genetic qatar gulf lipid diabetes inherited',keys:['LDL'],t:'Very high LDL with normal sugar markers is a different pattern from diabetic dyslipidaemia in Qatari data, pointing to a genetic component.'},
+ {id:'METS',src:'Harmonised metabolic syndrome criteria (Alberti et al., 2009)',tags:'metabolic syndrome waist triglyceride hdl blood pressure glucose criteria',keys:['TG','HDL','SBP','GLU'],t:'Metabolic syndrome is 3 of 5: raised waist, triglycerides ≥1.7 mmol/L, low HDL (<1.0 men, <1.3 women), blood pressure ≥130/85, fasting glucose ≥5.6 mmol/L.'},
+ {id:'CRP',src:'AHA/CDC scientific statement on hs-CRP',tags:'crp hs-crp inflammation acute infection cardiovascular repeat',keys:['HSCRP'],t:'hs-CRP below 1 mg/L is low, 1–3 average, above 3 high cardiovascular risk. Above 10 suggests acute inflammation: repeat after it settles and look for a cause.'},
+ {id:'GHANIM',src:'Ghanim et al., QU (regional research)',tags:'inflammation il-6 diabetes vascular qatar gulf',keys:['HSCRP'],t:'Inflammation drives the vascular complications of diabetes in regional data.'},
+ {id:'WHO-HB',src:'WHO 2024 haemoglobin thresholds',tags:'anaemia anemia haemoglobin hemoglobin hb iron',keys:['HB'],t:'Anaemia in non-pregnant adults is haemoglobin below 12 g/dL in women and below 13 g/dL in men; check iron studies and repeat the blood count.'},
+ {id:'ENDO-D',src:'Endocrine Society vitamin D guideline 2024',tags:'vitamin d deficiency testing supplement',keys:['VITD'],t:'Routine 25(OH)D testing is not advised in healthy adults under 75; interpret results in clinical context.'},
+ {id:'OBES',src:'Lancet Commission on clinical obesity 2025',tags:'obesity bmi weight waist adiposity body',keys:['BMI'],t:'BMI alone does not define obesity: confirm with a body-fat measure such as waist, and assess organ function to separate clinical from preclinical obesity.'},
+ {id:'ALIYU',src:'Aliyu et al., HBKU / QBRI (regional research)',tags:'obesity bmi adiposity genetic diabetes uncoupled qatar gulf',keys:['BMI'],t:'High BMI does not always mean high metabolic risk: genetics can uncouple adiposity from diabetes risk.'},
+ {id:'THY',src:'ESC/EAS 2019 · secondary dyslipidaemia',tags:'thyroid tsh hypothyroid lipid ldl cholesterol',keys:['TSH','LDL'],t:'Hypothyroidism is a secondary cause of raised LDL; check FT4 before attributing the lipid pattern elsewhere.'},
+ {id:'GATE2',src:'Burak Gate 2 · critical-value list',tags:'critical urgent emergency escalate escalation gate alert potassium sodium glucose haemoglobin platelets',keys:['GLU','HB','PLT','WBC','CREA'],t:'Gate 2 runs first. A value outside its safe limit (for example glucose ≤2.5 or ≥25 mmol/L, haemoglobin <7 g/dL) starts the critical-value pathway: the named clinician is notified and must acknowledge, or it escalates.'}];
+const STOP=new Set('a an the is are was were be of to for in on and or with what which why how does do this that patient patients his her he she it its my me i should could would can about any there their than then any been has have had from by at as'.split(' '));
+const SYN={sugar:'glucose hba1c diabetes prediabetes',diabetic:'diabetes',a1c:'hba1c',liver:'alt ast fib4 masld',fatty:'masld liver',kidney:'egfr creatinine ckd',renal:'kidney egfr',cholesterol:'ldl lipid',lipids:'lipid ldl',fat:'lipid triglyceride',inflammation:'crp hs-crp',inflammatory:'crp inflammation',thyroid:'tsh',anemia:'anaemia haemoglobin',weight:'bmi obesity',heart:'ldl apob crp cardiovascular',drift:'progression',drifting:'progression',worse:'progression',urgent:'critical escalate',danger:'critical',retest:'repeat',recheck:'repeat',gulf:'qatar regional',regional:'qatar gulf'};
+const BOUND=/\b(diagnos\w*|does (he|she|the patient|this patient) have|has (he|she) got|is (it|this|he|she) (diabetes|ckd|cancer|cirrhosis)|prescri\w*|dose|dosage|mg of|medicat\w*|drug|statin|metformin|insulin|start (him|her|on)|treatment plan)\b/i;
+function tok(q){const out=[];q.toLowerCase().replace(/[^a-z0-9\-. ]/g,' ').split(/\s+/).filter(w=>w&&!STOP.has(w)).forEach(w=>{out.push(w);if(SYN[w])out.push(...SYN[w].split(' '));});return out;}
+function retrieve(q,p,ri,sm){const T=tok(q);const fl=new Set(sm.flg.map(x=>x.k));
+ return LIB.map(d=>{let sc=0;const tg=d.tags.split(' '),tx=d.t.toLowerCase();T.forEach(w=>{if(tg.includes(w))sc+=3;else if(w.length>3&&tx.includes(w))sc+=1;});if(sc>0&&d.keys.some(k=>fl.has(k)))sc+=2;return {d,sc};}).filter(x=>x.sc>=3).sort((a,b)=>b.sc-a.sc).slice(0,3);}
+function askFree(p,ri,sm,q){const hits=retrieve(q,p,ri,sm);const cites=[];const cite=t=>{let i=cites.indexOf(t);if(i<0){cites.push(t);i=cites.length-1;}return `<span class="cite">${i+1}</span>`;};
+ let h='';if(BOUND.test(q))h+=`<div class="bound"><b>Outside what Burak does.</b> Burak stratifies preventive risk; it does not diagnose or recommend medicines or doses. That decision rests with the treating clinician. Here is what the data and the library show:</div>`;
+ const g=gate2(p,ri);if(g.length)h+=`<p><b>First: a critical value is present</b> (${g.map(x=>`${M[x.k].full} ${fmt(x.v)} ${M[x.k].u}`).join(', ')}). Follow the critical-value pathway before anything else${cite(LIB.find(x=>x.id==='GATE2').src)}.</p>`;
+ if(!hits.length)return h+`<p><b>Not in Burak’s library.</b> I couldn’t find a guideline or study in the library that answers this, so I won’t guess. Try asking about sugar, liver, kidney, lipids, inflammation, thyroid, anaemia or weight.</p>${cites.length?`<div class="src"><b>Sources</b><br>${cites.map((c,i)=>`${i+1}. ${c}`).join('<br>')}</div>`:''}<div class="guard">Risk stratification for clinician review. Not a diagnosis or a treatment instruction.</div>`;
+ h+=`<ul>${hits.map(({d})=>{const pf=d.keys.map(k=>({k,g:get(p,ri,k)})).filter(x=>x.g.v!=null);return `<li>${d.t}${cite(d.src)}${pf.length?`<div class="small" style="margin-top:3px"><b>This patient:</b> ${pf.map(x=>`${M[x.k].full} ${fmt(x.g.v)} ${M[x.k].u} (${x.g.lab.toLowerCase()})`).join(' · ')}</div>`:''}</li>`;}).join('')}</ul>`;
+ return h+`<div class="src"><b>Sources</b><br>${cites.map((c,i)=>`${i+1}. ${c}`).join('<br>')}</div><div class="guard">Risk stratification for clinician review. Not a diagnosis or a treatment instruction.</div>`;}
+function tAsk(p,ri,sm){const q=state.askq||'drift';const ql=q==='free'?state.askFree:AQ.find(x=>x[0]===q)[1];
+  return `<div class="ask"><div class="chatbox"><div class="chathd"><b>Ask Burak</b><span class="small">${p.id} · report ${ri+1}</span><span class="pv">PREVIEW</span></div>
+  <div class="msgs"><div class="msg-u">${esc(ql)}</div><div class="msg-a">${q==='free'?askFree(p,ri,sm,state.askFree):askAnswer(p,ri,sm,q)}</div></div>
+  <form class="askf" id="askForm"><input id="askin" maxlength="300" placeholder="Ask about this patient, e.g. why is the liver line drifting?" aria-label="Ask Burak a question" value="${esc(state.askDraft||'')}"><button class="btn pri" type="submit">Ask</button></form>
+  <div class="ctxs">Context used: <b>age band, sex and this report’s Burak findings</b>. Not used: ID, name, dates of birth. Answers come only from the library on the right.</div></div>
+  <div><div class="qs">${AQ.map(([id,t])=>`<button class="qbtn" data-askq="${id}" aria-pressed="${id===q}">${t}</button>`).join('')}</div>
+  <details class="lib" style="margin-top:12px"><summary><b>Library in this preview (${LIB.length} sources)</b></summary><ul>${[...new Set(LIB.map(d=>d.src))].map(s=>`<li>${s}</li>`).join('')}</ul><p class="small">In production the library adds national and GCC clinical guidelines under licence, and a language model writes answers only from retrieved passages, in-region.</p></details></div></div>`;}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-askq]');if(b){state.askq=b.dataset.askq;render();}});
+document.addEventListener('submit',e=>{if(e.target.id==='askForm'){e.preventDefault();const v=$('askin').value.trim();if(!v)return;state.askFree=v.slice(0,300);state.askq='free';state.askDraft='';audit('AI QUERY','Clinician asked Ask Burak a question (text not logged)');render();$('askin')?.focus();}});
+document.addEventListener('input',e=>{if(e.target.id==='askin')state.askDraft=e.target.value;});
+
+const TITLES={nextphase:['Next phase: live data and AI','From this demo to live lab feeds, longitudinal records and a guideline-grounded assistant'],dashboard:['Dashboard','Overview of patients and reports · illustrative data'],patients:['Patients','Open a patient to see the Burak analysis'],analysis:['Clinical Data Intake & Baseline','View detailed clinical analysis and patient reports'],ingest:['Live lab feed','Lab and EHR results arriving between screening rounds, critical-value escalation and audit'],settings:['Settings','Reference ranges and tests by age group'],reports:['Clinical reports','Generated patient reports'],pop:['Population health','Results added up by district and age group'],evidence:['Related QBRI work','Research behind the Burak rules in this workspace']};
 function render(){renderSide();const v=state.view;$('ttl').textContent=TITLES[v][0];$('sub').textContent=TITLES[v][1];
-  $('view').innerHTML=({dashboard:renderDashboard,patients:renderPatients,analysis:renderAnalysis,settings:renderSettings,ingest:renderIngest,reports:renderReports,pop:renderPop,evidence:evidenceLib})[v]();}
+  $('view').innerHTML=({dashboard:renderDashboard,patients:renderPatients,analysis:renderAnalysis,settings:renderSettings,ingest:renderIngest,reports:renderReports,pop:renderPop,evidence:evidenceLib,nextphase:renderNext})[v]();}
 function openPatient(i,tab){state.pi=i;delete state.at[i];state.view='analysis';state.tab=tab||'marker';state.cat=null;state.vel=null;state.cohAll=false;render();window.scrollTo({top:0});}
 document.addEventListener('click',e=>{
   const n=e.target.closest('[data-nav]');if(n){state.view=n.dataset.nav;render();window.scrollTo({top:0});return;}
